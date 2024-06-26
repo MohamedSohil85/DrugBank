@@ -79,15 +79,7 @@ public Map<String, Object> findAllDrugs(int pageNo, int pageSize) throws Resourc
         objectMap.put("total pages :",drugsBankPage.getTotalPages());
         objectMap.put("elements pro Page :",drugsBankPage.getSize());
 return objectMap;
-   /* Pageable paging = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
 
-    Page<EmployeeEntity> pagedResult = repository.findAll(paging);
-
-    if(pagedResult.hasContent()) {
-        return pagedResult.getContent();
-    } else {
-        return new ArrayList<EmployeeEntity>();
-    }*/
 }
 
 public List<DrugsDataDTO>findAllDrugsStartWith(String keyword) throws ResourceNotFoundException {
